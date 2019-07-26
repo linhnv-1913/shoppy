@@ -1,4 +1,4 @@
-class Admin::Api::SessionsController < ApplicationController
+class Api::Admin::SessionsController < ApplicationController
   before_action :load_admin, only: :create
 
   def create
@@ -8,7 +8,7 @@ class Admin::Api::SessionsController < ApplicationController
 
   private
   def load_admin
-    @admin = Admin.find_by email: params[:email]
+    @admin = ::Admin.find_by email: params[:email]
   end
 
   def login_params

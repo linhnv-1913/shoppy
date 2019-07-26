@@ -1,4 +1,4 @@
-class Admin::Api::ResetPasswordsController < ApplicationController
+class Api::Admin::ResetPasswordsController < ApplicationController
   before_action :load_admin, only: :edit
 
   def edit
@@ -8,6 +8,6 @@ class Admin::Api::ResetPasswordsController < ApplicationController
   private
   def load_admin
     decode_data = JsonWebToken.check_valid_token! params[:token]
-    @admin = Admin.find_by! id: decode_data[:user_id]
+    @admin = ::Admin.find_by! id: decode_data[:user_id]
   end
 end

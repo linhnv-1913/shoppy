@@ -3,7 +3,8 @@ require "rails_helper"
 RSpec.describe AuthenticableMailer, type: :mailer do
   context "instructions" do
     let(:user){create :user}
-    let(:mail){described_class.reset_password(user, nil).deliver_now}
+    let(:domain){"localhost:8080"}
+    let(:mail){described_class.reset_password(user, nil, domain).deliver_now}
 
     it "renders the subject" do
       expect(mail.subject).to eq("Password reset")
@@ -18,7 +19,7 @@ RSpec.describe AuthenticableMailer, type: :mailer do
     end
 
     it "assigns @confirmation_url" do
-      expect(mail.body.encoded).to match("http://localhost:3000/api/reset_passwords/edit")
+      expect(mail.body.encoded).to match("http://localhost:8080/reset_passwords")
     end
   end
 end

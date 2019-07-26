@@ -3,6 +3,6 @@ en:
     invalid_token: "The URL has expired. Please start the proceduce again from beginning"
     send_email_error: "Send mail error. Please try again"
     authentication_error: "Unauthenticated"
-    record_not_found: "%{record} not found"
+    record_not_found: "Send mail error. Please try again"
   forgot_password_controller: 
     send_email_success: "We sent a password reset email to %{email}. If you do not receive the email after a while, please re-enter here"

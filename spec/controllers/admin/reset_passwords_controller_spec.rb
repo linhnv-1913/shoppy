@@ -2,7 +2,7 @@ require "rails_helper"
 require "helpers/valid_json_helper.rb"
 require "helpers/create_token_helper.rb"
 
-RSpec.describe Admin::Api::ResetPasswordsController, type: :controller do
+RSpec.describe Api::Admin::ResetPasswordsController, type: :controller do
   include ValidJsonHelper
   include CreateTokenHelper
 

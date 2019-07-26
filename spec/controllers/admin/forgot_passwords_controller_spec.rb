@@ -1,7 +1,7 @@
 require "rails_helper"
 require "helpers/valid_json_helper.rb"
 
-RSpec.describe Admin::Api::ForgotPasswordsController, type: :controller do
+RSpec.describe Api::Admin::ForgotPasswordsController, type: :controller do
   include ValidJsonHelper
 
   context "when send email success" do
