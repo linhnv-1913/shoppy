@@ -14,4 +14,6 @@ Rails.application.routes.draw do
     resources :admins, only: %i(create index destroy)
     resources :users, only: %i(edit update)
   end
+  require "sidekiq/web"
+  mount Sidekiq::Web => "/sidekiq"
 end

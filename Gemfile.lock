@@ -60,6 +60,7 @@ GEM
       activesupport (>= 4.2)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-schema (~> 1.0)
+    connection_pool (2.2.2)
     crass (1.0.4)
     database_cleaner (1.7.0)
     deep_merge (1.2.1)
@@ -154,6 +155,8 @@ GEM
     puma (3.12.1)
     rack (2.0.7)
     rack-cors (1.0.3)
+    rack-protection (2.0.7)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.3)
@@ -188,6 +191,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    redis (4.1.2)
     rspec-collection_matchers (1.1.3)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.8.1)
@@ -220,6 +224,11 @@ GEM
     ruby_dep (1.5.0)
     shoulda-matchers (4.1.0)
       activesupport (>= 4.2.0)
+    sidekiq (6.0.0)
+      connection_pool (>= 2.2.2)
+      rack (>= 2.0.0)
+      rack-protection (>= 2.0.0)
+      redis (>= 4.1.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -284,6 +293,7 @@ DEPENDENCIES
   rspec_junit_formatter
   rubocop (~> 0.71.0)
   shoulda-matchers
+  sidekiq
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
