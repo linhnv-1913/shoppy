@@ -13,10 +13,6 @@ RSpec.describe Api::ForgotPasswordsController, type: :controller do
       expect(subject.status).to eq(200)
     end
 
-    it "sends an email" do
-      expect{subject}.to change{ActionMailer::Base.deliveries.size}.by(1)
-    end
-
     it "has responds user data as json" do
       expect(valid_json? subject.body).to be true
     end

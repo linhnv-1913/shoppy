@@ -22,6 +22,7 @@ group :development, :test do
   gem "annotate"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "faker"
+  gem "sidekiq"
 end
 
 group :test do

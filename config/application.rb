@@ -28,5 +28,6 @@ module Shoppy
     config.i18n.available_locales = [:en]
 
     config.api_only = true
+    config.active_job.queue_adapter = :sidekiq
   end
 end
